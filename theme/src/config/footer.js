@@ -1,80 +1,44 @@
 export const footerSocials = [
   {
-    name: 'Twitter',
-    url: 'https://twitter.com/littlesticksdev',
-    icon: "mdi:twitter",
-  },
-  {
     name: 'Youtube',
     url: 'https://youtube.com/c/LittleSticks',
     icon: "mdi:youtube",
   },
+
   {
-    name: 'Github',
-    url: 'https://github.com/littlesticks',
-    icon: "mdi:github",
-  },
-  {
-    name: 'Discord',
+    name: 'Instagram',
     url: 'https://littlesticks.dev/discord',
-    icon: "ic:baseline-discord",
+    icon: "mdi:instagram",
   },
 ]
 
 export const footerLists = [
 	{
-		title: 'Landing Pages',
+		title: 'Sobre nosotros',
 		items: [
 			{
-				title: 'Landing Page 1',
-				slug: '/landing-pages/landing-1',
+				title: "Beneficios",
+				slug: '/#beneficios'
+
 			},
 			{
-				title: 'Landing Page 2',
-				slug: '/landing-pages/landing-2',
-			},
-      // {
-			// 	title: 'Landing Page 3',
-			// 	slug: '/landing-pages/landing-3',
-			// },
-		],
-	},
-	{
-		title: 'Company',
-		items: [
-			{
-				title: 'About',
-				slug: '/company/about',
+				title: 'Características',
+				slug: '/#caracteristicas',
 			},
 			{
-				title: 'Blog',
-				slug: '/blog',
-			},
-			{
-				title: 'Contact',
-				slug: '/company/contact',
+				title: 'Contacto',
+				slug: '/#contacto',
 			},
 		],
 	},
 	{
-		title: 'Theme',
+		title: 'Grip n Guard',
 		items: [
 			{
-				title: 'Get Started',
-				slug: '/theme/get-started',
+				title: "Es un producto distribuido exclusivamente por Cosulca: empresa de distribución de productos exclusivos para la protección, identificación, cuidado y mejoramiento del servicio de reparación automotriz.",
+				slug: '/#beneficios'
+
 			},
-			{
-				title: 'Style Guide',
-				slug: '/theme/style-guide',
-			},
-      {
-        title: 'Theme Setup',
-        slug: '/theme/theme-setup',
-      },
-      {
-        title: 'Customizing Odyssey',
-        slug: '/theme/customizing-odyssey',
-      }
 		],
 	},
 ];

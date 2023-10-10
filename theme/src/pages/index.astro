@@ -1,92 +1,100 @@
 ---
-import { Container, FeatureCard } from '@littlesticks/odyssey-theme-components';
-
+import {Icon} from 'astro-icon'
+import {
+	Button,
+	ThreeColumnTextSection,
+	YouTubeEmbedSection,
+	StickyTextImageSection,
+	CtaCardSection
+} from '@littlesticks/odyssey-theme-components';
 import Layout from '../layouts/Page.astro';
-import HomeHeroSection from '../components/sections/heros/HomeHeroSection.astro';
+import TextAndImageHero from '../components/sections/heros/TextAndImageHero.astro';
+
+const seo = {
+	title: 'Grip n Guard | Cosulca',
+	description: 'Protege tu mundo con responsabilidad ambiental.',
+};
 ---
 
-<Layout>
-	<HomeHeroSection />
-	<Container>
-		<section class="feature-card__section">
-			<h2>Landing Pages</h2>
-			<p>
-				Use one of our landing pages to jumpstart your website or
-				ad campaign.
-			</p>
-			<div class="feature-card__grid">
-				<FeatureCard href="/landing-pages/landing-1" title="Landing Page 1" imgSrc="/assets/images/home/screenshots/landing-1">
-				</FeatureCard>
-				<FeatureCard href="/landing-pages/landing-2" title="Landing Page 2" imgSrc="/assets/images/home/screenshots/landing-2">
-				</FeatureCard>
-			</div>
-		</section>
-	</Container>
+<Layout seo={seo} >
+	<TextAndImageHero>
+		<div slot="text-container">
+			<h1>Protección y sostenibilidad en un solo producto</h1>
+			<p>Protege tu mundo con responsabilidad ambiental.</p>
+		</div>
+		<div slot="btns-container">
+			<Button href="/theme/get-started" customIcon
+				>Comienza ahora <Fragment slot="icon">
+          <Icon name="ic:baseline-chevron-right"/>
+        </Fragment></Button
+			>
+		</div>
+		<picture slot="image-container">
+			<img
+				src="/assets/images/cosulca_hero.webp"
+				alt="Grip n Guard"
+				id="home-hero-image"
+			/>
+		</picture>
+	</TextAndImageHero>
 
-	<Container>
-		<section class="feature-card__section">
-			<h2>Company Pages</h2>
-			<p>
-				Use one of our prebuilt company pages for your about page, contact page,
-				legal pages, blog posts, etc.
-			</p>
-			<div class="feature-card__grid">
-				<FeatureCard href="/company/about" title="About Page" imgSrc="/assets/images/home/screenshots/about">
-				</FeatureCard>
-				<FeatureCard href="/company/contact" title="Contact Page" imgSrc="/assets/images/home/screenshots/contact">
-				</FeatureCard>
-				<FeatureCard href="/blog/" title="Blog Page" imgSrc="/assets/images/home/screenshots/blog">
-				</FeatureCard>
-				<FeatureCard
-					href="/blog/posts/remote-work-mental-health"
-					title="Blog Post"
-          imgSrc="/assets/images/home/screenshots/blog-post"
-				>
-				</FeatureCard>
-				<FeatureCard
-					href="/company/legal"
-					imgSrc="/assets/images/home/screenshots/legal"
-					title="Legal Page"
-				>
-				</FeatureCard>
-			</div>
-		</section>
-	</Container>
 
-	<Container>
-		<section class="feature-card__section">
-			<h2>Theme Pages</h2>
-			<p>Learn more about how to set up and use the Odyssey Theme.</p>
-			<div class="feature-card__grid">
-				<FeatureCard
-					href="/theme/get-started"
-					imgSrc="/assets/images/home/screenshots/get-started"
-					title="Get Started"
-				>
-				</FeatureCard>
-				<FeatureCard
-					href="/theme/style-guide"
-					imgSrc="/assets/images/home/screenshots/style-guide"
-					title="Style Guide"
-				>
-				</FeatureCard>
-			</div>
-		</section>
-	</Container>
+	<ThreeColumnTextSection>
+		<div slot="column-1-body">
+			<h2>Multiuso</h2>
+			<p>
+				Grip-N-Guard es una película de polietileno de vanguardia, destacando por su compleja estructura de múltiples capas de alta densidad. Este producto ha sido meticulosamente concebido para satisfacer las demandas de proyectos tanto domésticos como empresariales. 
+			</p>
+		</div>
+		<div slot="column-2-body">
+			<h2>Práctico</h2>
+			<p>
+				Grip-N-Guard se adhiere fácilmente a cualquier superficie y retiene el polvo más 3 veces mejor que la mayoría de los paños de plástico. Ofrece una excelente protección y facilita la limpieza de las áreas donde se utiliza. Hace el trabajo mucho más fácil y rápido. 
+			</p>
+		</div>
+		<div slot="column-3-body">
+			<h2>Rápido uso</h2>
+			<p>
+				Grip-N-Guard demuestra su eficacia al atraer y retener polvo, pintura, partículas en suspensión, aserrín y otros residuos, evitando que sean reintroducidos en el entorno durante las tareas de reposición o limpieza. Este proceso de retención de contaminantes se traduce en varios beneficios significativos, tales como la reducción del tiempo requerido para mantener el área limpia, menores costos asociados con la limpieza y, en última instancia, la generación de mayores beneficios para quienes emplean Grip-N-Guard en sus proyectos o actividades.
+			</p>
+		</div>
+	</ThreeColumnTextSection>
+
+	<YouTubeEmbedSection url="https://youtu.be/lXRJLpnfWZM?si=6fHRcLVAP-D24pgW" rounded />
+
+  <StickyTextImageSection>
+    <div slot="text-container">
+      <h2>Características</h2>
+      <h3>100% Natural</h3>
+      <p>
+        Grip-N-Guard es un producto verdaderamente ecológico, ya que se trata de una película plástica fabricada con polietileno, pero con una característica sobresaliente: es completamente biodegradable una vez que ha cumplido su propósito. Esto significa que, tras su uso, Grip-N-Guard puede ser desechado de manera responsable sin preocupaciones ambientales, ya que se descompone de manera natural, contribuyendo así a la reducción de la acumulación de desechos plásticos en nuestro entorno. Esta cualidad lo convierte en una elección ecoamigable para aquellos que buscan productos sostenibles en sus proyectos y actividades.
+      </p>
+      <h3>Versátil</h3>
+        <p>
+        La propiedad de adherencia gracias a la estática hace que Grip-N-Guard sea capaz de unirse a prácticamente cualquier superficie, lo que lo convierte en un recurso sumamente versátil. Sus aplicaciones son innumerables, ya que puede ser utilizado como pizarra, como barrera higiénica para prevenir el contacto entre bacterias e insectos, en el momento de fumigar, en talleres de pintura, en entornos de oficina y en hogares. Esta versatilidad lo convierte en una herramienta valiosa para una amplia variedad de necesidades y situaciones, donde su capacidad de adherencia y adaptabilidad resultan fundamentales para su utilidad efectiva.
+
+      </p>
+      <h3>Fácil uso y costo eficiente</h3>
+        <p>
+        Grip-N-Guard se caracteriza por su facilidad de uso y su accesibilidad para personas de todas las edades y ámbitos. Tanto amas de casa como jóvenes y profesionales pueden aprovechar sus ventajas. Además, es notablemente asequible en términos de costos
+      </p>
+    </div>
+     <picture slot="image-container">
+      <img
+        src="/assets/images/caracteristicas.webp"
+        alt="Uso de Grip n Guard"
+        loading="lazy"
+      />
+    </picture>
+  </StickyTextImageSection>
+
+  <CtaCardSection background="var(--theme-surface-2)" color="var(--theme-on-surface-2)">
+    <h2>¿Estas listo?</h2>
+    <p>Contáctanos para saber como adquirir Grip N Guard y acelerar tu trabajo.</p>
+    <Button href="mailto:ventas@cosulca.com" customIcon>Contacto <Fragment slot="icon">
+      <Icon name="ic:baseline-chevron-right"/>
+    </Fragment></Button>
+  </CtaCardSection>
+
 </Layout>
 
-<style>
-	.feature-card__section {
-		margin: var(--section-margin) auto;
-	}
-	.feature-card__grid {
-		display: grid;
-		grid-template-columns: repeat(2, 1fr);
-		gap: var(--theme-grid-gap);
-	}
-	@media (max-width: 768px) {
-		.feature-card__grid {
-			grid-template-columns: 1fr;
-		}
-	}
-</style>
